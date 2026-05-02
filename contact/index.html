@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Page | Example Guide</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .contact-page .contact-main {
+      width: min(1160px, calc(100% - 40px));
+      margin: 56px auto;
+    }
+
+    .contact-intro {
+      max-width: 780px;
+      margin-bottom: 40px;
+    }
+
+    .contact-eyebrow {
+      margin: 0 0 12px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .contact-intro h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      line-height: 0.96;
+    }
+
+    .contact-intro-body,
+    .contact-side-text {
+      margin: 0 0 16px;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .contact-split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .contact-copy,
+    .contact-form-panel {
+      min-width: 0;
+      padding: clamp(24px, 4vw, 40px);
+    }
+
+    .contact-copy {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-copy h2,
+    .contact-form-panel h2 {
+      margin: 0 0 16px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1;
+    }
+
+    .contact-page .contact-button {
+      width: fit-content;
+      margin: 8px 0 24px;
+    }
+
+    .contact-image,
+    .contact-image-placeholder {
+      width: 100%;
+      min-height: 260px;
+      margin-top: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .contact-image-placeholder {
+      border: 1px dashed var(--color-border);
+      opacity: 0.45;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-form label {
+      display: grid;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      min-height: 46px;
+      padding: 12px 14px;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+    }
+
+    .contact-form textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .contact-submit {
+      min-height: 46px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 6px;
+      background: var(--color-primary);
+      color: var(--color-button-text);
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    @media (max-width: 820px) {
+      .contact-page .contact-main {
+        width: min(620px, calc(100% - 32px));
+        margin: 36px auto;
+      }
+
+      .contact-split {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="contact-page">
+  <header class="site-header">
+    <a class="site-brand" href="/">
+      <span class="site-title"><span data-language-key="header.title">Header Title</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/"><span data-language-key="header.nav.landing">Landing</span></a>
+      <a href="/basic/"><span data-language-key="header.nav.basic">Basic</span></a>
+      <a href="/contact/" aria-current="page"><span data-language-key="header.nav.contact">Contact</span></a>
+    </nav>
+      <label class="language-picker language-picker-header">
+        <span class="visually-hidden">Language</span>
+        <select data-language-picker aria-label="Language">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+        </select>
+      </label>
+  </header>
+
+  <main class="contact-main">
+    <section class="contact-intro" aria-labelledby="contact-title">
+            <p class="contact-eyebrow"><span data-language-key="pages.contact.intro.subtitle">Contact</span></p>
+      <h1 id="contact-title"><span data-language-key="pages.contact.intro.title">Contact Page</span></h1>
+            <p class="contact-intro-body"><span data-language-key="pages.contact.intro.body.1">Have a question, booking request, or collaboration idea? Send a note and we will get back to you.</span></p>
+    </section>
+
+    <section class="contact-split" aria-label="Contact Page">
+      <div class="contact-copy">
+              <p class="contact-eyebrow"><span data-language-key="pages.contact.side.subtitle">Direct Contact</span></p>
+        <h2><span data-language-key="pages.contact.side.title">Let&#x27;s Talk</span></h2>
+              <p class="contact-side-text"><span data-language-key="pages.contact.side.text.1">Use the form for inquiries, availability, project details, or partnership requests.</span></p>
+                <a class="button contact-button" href="mailto:hello@example.com"><span data-language-key="pages.contact.side.button.text">Email Directly</span></a>
+                <div class="contact-image-placeholder" aria-hidden="true"></div>
+      </div>
+      <div class="contact-form-panel">
+                <h2><span data-language-key="pages.contact.form.title">Send a Message</span></h2>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="dabb4aad-f81c-432e-8c3b-18092a51ae73">
+          <label>
+            <span><span data-language-key="pages.contact.form.namelabel">Name</span></span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            <span><span data-language-key="pages.contact.form.emaillabel">Email</span></span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span><span data-language-key="pages.contact.form.messagelabel">Message</span></span>
+            <textarea name="message" rows="7" required></textarea>
+          </label>
+          <button class="contact-submit" type="submit"><span data-language-key="pages.contact.form.submitlabel">Submit</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-column site-footer-left">
+      <span><span data-language-key="footer.left.1">Left footer text</span></span>
+    </div>
+    <div class="site-footer-column site-footer-center">
+      <a href="https://example.com"><span data-language-key="footer.center.1">Center footer link</span></a>
+    </div>
+    <div class="site-footer-column site-footer-right">
+      <a href="/contacxt/"><span data-language-key="footer.right.1">Contact</span></a>
+      <label class="language-picker language-picker-footer-right-1">
+        <span class="visually-hidden">Language</span>
+        <select data-language-picker aria-label="Language">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+        </select>
+      </label>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>

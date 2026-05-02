@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Half Widget Page | Example Guide</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .half-widget-page {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: inherit;
+    }
+
+    .half-widget-layout {
+      width: min(1440px, calc(100% - 64px));
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(320px, 0.86fr) minmax(560px, 1.14fr);
+      gap: 32px;
+      align-items: center;
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    .half-widget-copy {
+      max-width: 560px;
+    }
+
+    .half-widget-subtitle {
+      margin: 0 0 14px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+
+    .half-widget-copy h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.6rem, 6vw, 5.75rem);
+      line-height: 0.95;
+    }
+
+    .half-widget-copy p {
+      margin: 0 0 16px;
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .half-widget-panel {
+      min-width: 0;
+    }
+
+    .half-widget-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .half-widget-grid > * {
+      min-height: 220px;
+    }
+
+    @media (max-width: 1040px) {
+      .half-widget-layout {
+        width: min(820px, calc(100% - 48px));
+        grid-template-columns: 1fr;
+        align-items: start;
+        padding: 40px 0;
+      }
+
+      .half-widget-copy {
+        max-width: 680px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .half-widget-layout {
+        width: min(420px, calc(100% - 32px));
+        gap: 24px;
+        padding: 24px 0;
+      }
+
+      .half-widget-copy h1 {
+        font-size: clamp(2.4rem, 14vw, 4rem);
+      }
+
+      .half-widget-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .half-widget-grid > * {
+        min-height: 150px;
+      }
+    }
+  </style>
+</head>
+<body class="half-widget-page">
+
+  <main class="half-widget-layout" aria-label="Half Widget Page">
+    <section class="half-widget-copy" aria-labelledby="half-widget-title">
+      <p class="half-widget-subtitle"><span data-language-key="pages.half.widget.subtitle">Placeholder subtitle</span></p>
+      <h1 id="half-widget-title"><span data-language-key="pages.half.widget.title">Half Widget Page</span></h1>
+      <p><span data-language-key="pages.half.widget.body.1">Placeholder body text for this split widget page.</span></p>
+    </section>
+    <section class="half-widget-panel" aria-label="Half Widget Page widgets">
+      <div class="widget-area widgets-root half-widget-grid" id="widget-area"></div>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+  <script src="/widget_types/navigation/widget.js"></script>
+  <script src="/widget_definitions/navigation-landing/definition.js"></script>
+  <script src="/widget_definitions/navigation-basic/definition.js"></script>
+  <script src="/widget_definitions/navigation-widget/definition.js"></script>
+  <script src="/widget_definitions/navigation-half-widget/definition.js"></script>
+  <script src="/widget_definitions/navigation-contact/definition.js"></script>
+  <script src="widget-order.js"></script>
+  <script src="/widget-loader.js"></script>
+</body>
+</html>

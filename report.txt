@@ -1,0 +1,65 @@
+Project name: Example Guide
+Domain: guide.example.com
+Tab title: Example Guide
+Landing page: landing
+
+Pages generated:
+- Landing Page (landing) -> /
+- Basic Page (basic) -> /basic/
+- Widget Page (widget) -> /widget/
+- Half Widget Page (half-widget) -> /half-widget/
+- Contact Page (contact) -> /contact/
+
+Templates used:
+- basic_page
+- contact_page
+- halfWidget_page
+- landing_page
+- widget_page
+
+Themes:
+- Default (light, dark)
+- My Custom Theme (light, dark)
+
+Languages:
+- en (default)
+- de
+
+Generated files:
+- CNAME
+- README.md
+- assets/.gitkeep
+- basic/index.html
+- contact/index.html
+- half-widget/index.html
+- half-widget/widget-order.js
+- index.html
+- landing/index.html
+- languages/de.json
+- languages/en.json
+- report.txt
+- script.js
+- style.css
+- widget-definitions.js
+- widget-loader.js
+- widget/index.html
+- widget/widget-order.js
+- widget_definitions/navigation-basic/definition.js
+- widget_definitions/navigation-contact/definition.js
+- widget_definitions/navigation-half-widget/definition.js
+- widget_definitions/navigation-landing/definition.js
+- widget_definitions/navigation-widget/definition.js
+- widget_types/about_me_widget/widget.js
+- widget_types/app_showcase/widget.js
+- widget_types/navigation/widget.js
+- widget_types/photo_widget/widget.js
+- widget_types/quote/widget.js
+- widget_types/social_links_widget/widget.js
+- widget_types/spotify_widget/widget.js
+- widget_types/svg_widget/widget.js
+- widget_types/text_widget/widget.js
+- widget_types/title_widget/widget.js
+- widget_types/website_showcase/widget.js
+
+GitHub repo name: Example Guide - Website
+GitHub repo URL: git@github.com:B1s9l/Example-Guide---Website.git

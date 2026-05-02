@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reference config showing the available website generator options.">
+  <title>Basic Page | Example Guide</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="/">
+      <span class="site-title"><span data-language-key="header.title">Header Title</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/"><span data-language-key="header.nav.landing">Landing</span></a>
+      <a href="/basic/" aria-current="page"><span data-language-key="header.nav.basic">Basic</span></a>
+      <a href="/contact/"><span data-language-key="header.nav.contact">Contact</span></a>
+    </nav>
+      <label class="language-picker language-picker-header">
+        <span class="visually-hidden">Language</span>
+        <select data-language-picker aria-label="Language">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+        </select>
+      </label>
+  </header>
+
+  <main>
+    <h2 class="page-title"><span data-language-key="pages.basic.name">Basic Page</span></h2>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-column site-footer-left">
+      <span><span data-language-key="footer.left.1">Left footer text</span></span>
+    </div>
+    <div class="site-footer-column site-footer-center">
+      <a href="https://example.com"><span data-language-key="footer.center.1">Center footer link</span></a>
+    </div>
+    <div class="site-footer-column site-footer-right">
+      <a href="/contacxt/"><span data-language-key="footer.right.1">Contact</span></a>
+      <label class="language-picker language-picker-footer-right-1">
+        <span class="visually-hidden">Language</span>
+        <select data-language-picker aria-label="Language">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+        </select>
+      </label>
+    </div>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>

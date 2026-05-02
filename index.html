@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A reference config showing the available website generator options.">
+  <title>Landing Page | Example Guide</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="athlete-landing-page">
+  <header class="site-header">
+    <a class="site-brand" href="/">
+      <span class="site-title"><span data-language-key="header.title">Header Title</span></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/" aria-current="page"><span data-language-key="header.nav.landing">Landing</span></a>
+      <a href="/basic/"><span data-language-key="header.nav.basic">Basic</span></a>
+      <a href="/contact/"><span data-language-key="header.nav.contact">Contact</span></a>
+    </nav>
+      <label class="language-picker language-picker-header">
+        <span class="visually-hidden">Language</span>
+        <select data-language-picker aria-label="Language">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+        </select>
+      </label>
+  </header>
+
+  <main class="athlete-main">
+    <section class="athlete-hero" aria-labelledby="athlete-hero-title">
+      <img class="athlete-hero-image" src="/resources/photos/placeholder-hero.jpg" alt="Placeholder person in a portrait setting">
+      <div class="athlete-hero-overlay" aria-hidden="true"></div>
+      <div class="athlete-hero-content">
+        <p class="athlete-eyebrow"><span data-language-key="pages.landing.hero.eyebrow">Placeholder Role</span></p>
+        <h2 class="athlete-hero-title" id="athlete-hero-title"><span data-language-key="pages.landing.hero.title">Landing Page</span></h2>
+      </div>
+    </section>
+
+    <section class="athlete-intro" aria-labelledby="athlete-intro-title">
+      <div class="athlete-intro-media">
+        <video class="athlete-intro-video" src="/resources/videos/placeholder-intro.mp4" poster="/resources/photos/placeholder-poster.jpg" aria-label="Placeholder intro video" autoplay muted loop playsinline></video>
+      </div>
+      <div class="athlete-intro-copy">
+        <p class="athlete-eyebrow"><span data-language-key="pages.landing.intro.eyebrow">Placeholder · Placeholder · Placeholder</span></p>
+        <h2 id="athlete-intro-title"><span data-language-key="pages.landing.intro.title">Placeholder Intro Heading</span></h2>
+                <p><span data-language-key="pages.landing.intro.body.1">Placeholder body text for a creator, sponsor profile, public figure, or personal brand. Replace this in the page template with a concise introduction.</span></p>
+                <div class="athlete-actions">
+          <a class="button athlete-button athlete-button-primary" href="/basic/"><span data-language-key="pages.landing.intro.buttons.1.label">Primary Link</span></a>
+          <a class="button athlete-button athlete-button-secondary" href="/widget/"><span data-language-key="pages.landing.intro.buttons.2.label">Secondary Link</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="athlete-content" aria-labelledby="athlete-content-title">
+      <div class="athlete-content-inner">
+        <p class="athlete-eyebrow"><span data-language-key="pages.landing.content.eyebrow">Updates</span></p>
+        <h2 id="athlete-content-title"><span data-language-key="pages.landing.content.title">Latest Notes</span></h2>
+
+        <div class="athlete-card-grid">
+        <article class="athlete-card">
+          <h3><span data-language-key="pages.landing.content.items.1.title">Placeholder Update</span></h3>
+          <p><span data-language-key="pages.landing.content.items.1.body">A short placeholder update for a current highlight or announcement.</span></p>
+          <a class="athlete-card-link" href="/basic/"><span data-language-key="pages.landing.content.items.1.linklabel">Read More</span></a>
+        </article>
+        <article class="athlete-card">
+          <h3><span data-language-key="pages.landing.content.items.2.title">Placeholder Opportunity</span></h3>
+          <p><span data-language-key="pages.landing.content.items.2.body">A short placeholder note for collaborations, bookings, or partnerships.</span></p>
+          <a class="athlete-card-link" href="/widget/"><span data-language-key="pages.landing.content.items.2.linklabel">Explore</span></a>
+        </article>
+        <article class="athlete-card">
+          <h3><span data-language-key="pages.landing.content.items.3.title">Placeholder Media</span></h3>
+          <p><span data-language-key="pages.landing.content.items.3.body">A short placeholder note for recent photos, videos, or press resources.</span></p>
+          <a class="athlete-card-link" href="/basic/"><span data-language-key="pages.landing.content.items.3.linklabel">View More</span></a>
+        </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-column site-footer-left">
+      <span><span data-language-key="footer.left.1">Left footer text</span></span>
+    </div>
+    <div class="site-footer-column site-footer-center">
+      <a href="https://example.com"><span data-language-key="footer.center.1">Center footer link</span></a>
+    </div>
+    <div class="site-footer-column site-footer-right">
+      <a href="/contacxt/"><span data-language-key="footer.right.1">Contact</span></a>
+      <label class="language-picker language-picker-footer-right-1">
+        <span class="visually-hidden">Language</span>
+        <select data-language-picker aria-label="Language">
+        <option value="en">EN</option>
+        <option value="de">DE</option>
+        </select>
+      </label>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
